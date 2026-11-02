@@ -1,0 +1,142 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f3eb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #593b2c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e9c9a5;
+}
+
+/* Main Content */
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    color: #593b2c;
+    margin-bottom: 10px;
+}
+
+/* Order Page Sections */
+.contact-section {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.feedback-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2,
+.feedback-form h2 {
+    color: #593b2c;
+    margin-bottom: 15px;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+    color: #79543c;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #593b2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #79543c;
+}
+
+/* Footer */
+footer {
+    background-color: #593b2c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 35px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
