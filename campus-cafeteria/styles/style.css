@@ -1,0 +1,159 @@
+
+/* Feedback Page Styling */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+/* Header */
+
+.fb-header {
+    background-color: #6b3525;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fb-header h1 {
+    margin: 0;
+}
+
+.fb-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.fb-header nav a:hover {
+    color: #ffd6a5;
+}
+
+/* Main Container */
+
+.fb-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Introduction */
+
+.fb-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fb-intro h2 {
+    color: #6b3525;
+    font-size: 30px;
+}
+
+.fb-intro p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Contact and Form Sections */
+
+.fb-content {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.fb-contact,
+.fb-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.fb-contact h2,
+.fb-form h2 {
+    color: #6b3525;
+    margin-top: 0;
+}
+
+.fb-contact p {
+    line-height: 1.8;
+}
+
+/* Feedback Form */
+
+.fb-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.fb-form input,
+.fb-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.fb-form textarea {
+    resize: vertical;
+}
+
+.fb-form button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #6b3525;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fb-form button:hover {
+    background-color: #8b4a35;
+}
+
+/* Footer */
+
+.fb-footer {
+    background-color: #6b3525;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+    .fb-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .fb-header nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .fb-content {
+        flex-direction: column;
+    }
+
+    .fb-container {
+        margin: 20px auto;
+    }
+}
