@@ -1,300 +1,113 @@
-/* ===== Menu Page (menu.html) — append to styles/style.css ===== */
 
-/* Intro */
-.menu-intro {
-    background-color: white;
-    padding: 35px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 30px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-}
+/* =====================================================
+   CAMPUS BITES — SHARED STYLESHEET
+   Pages: Home, Menu, Deals, Order, Feedback
+   ===================================================== */
 
-.menu-intro h2 {
-    color: #163a2b;
-    font-size: 32px;
-    margin-bottom: 12px;
-}
 
-/* Category grid */
-.menu-categories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-bottom: 30px;
-}
+/* =========================
+   1. GLOBAL BASE STYLES
+   ========================= */
 
-.menu-category {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    border-top: 4px solid #e89b2c;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-}
-
-.menu-category h3 {
-    color: #163a2b;
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-/* Item list */
-.menu-list {
-    list-style: none;
-}
-
-.menu-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 0;
-    border-bottom: 1px dashed #d9d9d9;
-}
-
-.menu-list li:last-child {
-    border-bottom: none;
-}
-
-.item-name {
-    color: #333;
-}
-
-.item-price {
-    color: #163a2b;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-/* Call to action */
-.menu-cta {
-    background: linear-gradient(135deg, #e8f3eb, #fff2dc);
-    text-align: center;
-    padding: 40px 30px;
-    border-radius: 12px;
-}
-
-.menu-cta p {
-    color: #163a2b;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .menu-intro h2 {
-        font-size: 25px;
-    }
-
-    .menu-categories {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-intro {
-        padding: 25px 18px;
-    }
-
-    .menu-category {
-        padding: 20px 16px;
-    }
-
-    .menu-cta {
-        padding: 30px 18px;
-    }
-}
-/* General Reset */
-
-/* Feedback Page Styling */
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff8f0;
-    color: #333;
-}
-
-/* Header */
-
-.fb-header {
-    background-color: #6b3525;
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.fb-header h1 {
-    margin: 0;
-}
-
-.fb-header nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-}
-
-.fb-header nav a:hover {
-    color: #ffd6a5;
-}
-
-/* Main Container */
-
-.fb-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-/* Introduction */
-
-.fb-intro {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.fb-intro h2 {
-    color: #6b3525;
-    font-size: 30px;
-}
-
-.fb-intro p {
-    font-size: 17px;
-    line-height: 1.6;
-}
-
-/* Contact and Form Sections */
-
-.fb-content {
-    display: flex;
-    gap: 30px;
-    align-items: stretch;
-}
-
-.fb-contact,
-.fb-form {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-.fb-contact h2,
-.fb-form h2 {
-    color: #6b3525;
-    margin-top: 0;
-}
-
-.fb-contact p {
-    line-height: 1.8;
-}
-
-/* Feedback Form */
-
-.fb-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 7px;
-    font-weight: bold;
-}
-
-.fb-form input,
-.fb-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-.fb-form textarea {
-    resize: vertical;
-}
-
-.fb-form button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #6b3525;
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
-body {
-    font-family: Arial, sans-serif;
     background-color: #f8f3eb;
-    color: #333;
+    color: #333333;
     line-height: 1.6;
 }
 
-/* Header */
-header {
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =====================================================
+   2. HOME, MENU AND ORDER HEADERS
+   ===================================================== */
+
+.home-header,
+.menu-header,
+.order-header {
     background-color: #163a2b;
     color: white;
     text-align: center;
     padding: 30px 20px;
 }
 
-header h1 {
+.home-header h1,
+.menu-header h1,
+.order-header h1 {
     font-size: 36px;
     margin-bottom: 8px;
 }
 
-header p {
+.home-header p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-/* Navigation */
-nav {
+.home-header nav,
+.menu-header nav,
+.order-header nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
     background-color: #593b2c;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
 }
 
-header h1 {
-    margin-bottom: 12px;
-}
-
-nav a {
+.home-header nav a,
+.menu-header nav a,
+.order-header nav a {
     color: white;
-    text-decoration: none;
     padding: 10px 16px;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
 
-nav a:hover {
+.home-header nav a:hover,
+.menu-header nav a:hover,
+.order-header nav a:hover {
     background-color: #f0a83c;
     color: #163a2b;
 }
 
-/* Main Content */
-main {
+
+/* =====================================================
+   3. HOME PAGE — index.html
+   ===================================================== */
+
+body:has(.about) main {
     max-width: 1100px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
-/* Hero Section */
-.hero {
+body:has(.about) .hero {
     background: linear-gradient(135deg, #e8f3eb, #fff2dc);
     text-align: center;
     padding: 70px 30px;
@@ -302,24 +115,22 @@ main {
     margin-bottom: 30px;
 }
 
-.hero h2 {
+body:has(.about) .hero h2 {
     color: #163a2b;
     font-size: 32px;
     margin-bottom: 18px;
 }
 
-.hero p {
+body:has(.about) .hero p {
     max-width: 750px;
     margin: 0 auto 25px;
     font-size: 17px;
 }
 
-/* Button */
 .btn {
     display: inline-block;
     background-color: #e89b2c;
     color: #163a2b;
-    text-decoration: none;
     padding: 12px 25px;
     border-radius: 6px;
     font-weight: bold;
@@ -330,7 +141,6 @@ main {
     background-color: #d48316;
 }
 
-/* About Section */
 .about {
     background-color: white;
     padding: 35px;
@@ -345,7 +155,6 @@ main {
     margin-bottom: 12px;
 }
 
-/* Information Section */
 .info {
     display: flex;
     gap: 25px;
@@ -367,174 +176,132 @@ main {
     margin-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    background-color: #163a2b;
-    color: white;
-    text-align: center;
-    padding: 18px;
-    margin-top: 40px;
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
+/* =====================================================
+   4. MENU PAGE — menu.html
+   ===================================================== */
 
-    .hero {
-        padding: 45px 20px;
-    }
-
-    .hero h2 {
-        font-size: 25px;
-    }
-
-    .info {
-        flex-direction: column;
-    }
-
-    nav {
-        gap: 5px;
-    }
-
-    nav a {
-        padding: 8px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 22px 12px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .about {
-        padding: 25px 18px;
-    }
-}
-    margin: 0 12px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #e9c9a5;
-}
-
-/* Main Content */
-.container {
-    width: 85%;
+body:has(.menu-intro) main {
     max-width: 1100px;
-    margin: 35px auto;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-.intro {
+.menu-intro {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
     text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.menu-intro h2 {
+    color: #163a2b;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.menu-intro p {
+    color: #555555;
+}
+
+.menu-categories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
     margin-bottom: 30px;
 }
 
-.intro h2 {
-    color: #593b2c;
-    margin-bottom: 10px;
-}
-
-/* Order Page Sections */
-.contact-section {
-    display: flex;
-    gap: 25px;
-    align-items: flex-start;
-}
-
-.contact-info,
-.feedback-form {
+.menu-category {
     background-color: white;
     padding: 25px;
     border-radius: 10px;
-    flex: 1;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #e89b2c;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 }
 
-.contact-info h2,
-.feedback-form h2 {
-    color: #593b2c;
+.menu-category h3 {
+    color: #163a2b;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
-.contact-info h3 {
-    margin-top: 20px;
-    color: #79543c;
+.menu-list {
+    list-style: none;
 }
 
-/* Form Styling */
-form label {
-    display: block;
-    margin: 12px 0 5px;
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #d9d9d9;
+}
+
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    color: #333333;
+}
+
+.item-price {
+    color: #163a2b;
     font-weight: bold;
+    white-space: nowrap;
 }
 
-form input,
-form select,
-form textarea {
-    width: 100%;
-    padding: 11px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-html {
-    scroll-behavior: smooth;
+.menu-cta {
+    background: linear-gradient(135deg, #e8f3eb, #fff2dc);
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 12px;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-
-    background-color: #f8f7f3;
-
-    color: #242424;
-
-    line-height: 1.6;
+.menu-cta p {
+    color: #163a2b;
+    font-size: 17px;
+    margin-bottom: 20px;
 }
 
-a {
-    text-decoration: none;
-}
 
-.container {
+/* =====================================================
+   5. DEALS PAGE — deals.html
+   ===================================================== */
+
+body:has(.deals-grid) .container {
     width: 90%;
-
     max-width: 1150px;
-
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-/* =========================
-   NAVIGATION
+/* Deals Header */
 
 .header {
     background-color: #ffffff;
-
     border-bottom: 1px solid #e8e5df;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.04);
 }
 
 .navbar {
-    min-height: 80px;
-
+    min-height: 85px;
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 25px;
 }
 
 .logo {
-    font-size: 25px;
-
+    font-size: 29px;
     font-weight: 800;
-
+    letter-spacing: -1px;
     color: #26352b;
 }
 
@@ -544,22 +311,16 @@ a {
 
 .nav-links {
     display: flex;
-
     align-items: center;
-
     gap: 25px;
-
     list-style: none;
 }
 
 .nav-links a {
     color: #555555;
-
     font-size: 14px;
-
     font-weight: 600;
-
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover,
@@ -567,671 +328,119 @@ a {
     color: #e58b36;
 }
 
+/* Deals Hero */
 
-/* =========================
-   HERO SECTION
-
-.hero {
-    padding: 100px 0;
-
-    background-color: #26352b;
-
-    color: #ffffff;
-
-    text-align: center;
-}
-
-.hero-label {
-    color: #f2b36f;
-
-    font-size: 13px;
-
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-
-    line-height: 1.2;
-
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #f2b36f;
-}
-
-.hero-description {
-    max-width: 650px;
-
-    margin: 0 auto 30px;
-
-    color: #dddddd;
-
-    font-size: 17px;
-}
-
-
-/* =========================
-   BUTTON
-
-.button {
-    display: inline-block;
-
-    background-color: #e58b36;
-
-    color: #ffffff;
-
-    padding: 13px 25px;
-
-    border-radius: 6px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.button:hover {
-    background-color: #c97424;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================
-   SECTION
-
-.section {
-    padding-top: 75px;
-
-    padding-bottom: 75px;
-}
-
-.section-heading {
-    text-align: center;
-
-    margin-bottom: 45px;
-}
-
-.section-label {
-    color: #e58b36;
-
-    font-size: 12px;
-
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-.section-heading h2 {
-    font-size: 35px;
-
-    margin-bottom: 12px;
-}
-
-.section-heading p {
-    color: #777777;
-}
-
-
-/* =========================
-   DAILY SPECIAL
-
-.daily-card {
-    max-width: 750px;
-
-    margin: 0 auto;
-
-    padding: 40px;
-
-    background-color: #ffffff;
-
-    border: 1px solid #e8e5df;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.daily-content h3 {
-    font-size: 28px;
-
-    margin: 15px 0;
-}
-
-.daily-content p {
-    color: #666666;
-}
-
-
-/* =========================
-   DEAL TAG
-
-.deal-tag {
-    display: inline-block;
-
-    background-color: #fff2df;
-
-    color: #bd7025;
-
-    padding: 6px 12px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   DEAL CARDS
-
-.deals-section {
-    background-color: #f0eee8;
-}
-
-.deals-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 25px;
-}
-
-.deal-card {
-    position: relative;
-
-    background-color: #ffffff;
-
-    padding: 30px;
-
-    border: 1px solid #e6e2da;
-
-    border-radius: 12px;
-
-    transition: 0.3s;
-}
-
-.deal-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-.deal-number {
-    color: #e9e5dc;
-
-    font-size: 40px;
-
-    font-weight: bold;
-
-    margin-bottom: 10px;
-}
-
-.deal-card h3 {
-    font-size: 24px;
-
-    margin: 15px 0;
-}
-
-.deal-card p {
-    color: #777777;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   FOOD ITEMS
-
-.deal-items {
-    list-style: none;
-
-    margin: 20px 0;
-}
-
-.deal-items li {
-    padding: 8px 0;
-
-    border-bottom: 1px solid #eeeeee;
-
-    color: #555555;
-}
-
-.deal-items li::before {
-    content: "✓ ";
-
-    color: #e58b36;
-
-    font-weight: bold;
-}
-
-
-/* =========================
-   PRICE
-
-.price {
-    font-size: 30px;
-
-    font-weight: bold;
-
-    color: #26352b;
-
-    margin-top: 25px;
-}
-
-.price span {
-    font-size: 14px;
-
-    color: #e58b36;
-}
-
-
-/* =========================
-   ORDER BANNER
-
-.order-banner {
-    background-color: #26352b;
-
-    color: #ffffff;
-
-    text-align: center;
-
-    padding: 65px 20px;
-}
-
-.order-banner h2 {
-    font-size: 32px;
-
-    margin-bottom: 15px;
-}
-
-.order-banner p {
-    color: #dddddd;
-
-    margin-bottom: 25px;
-}
-
-
-/* =========================
-   FOOTER
-
-.footer {
-    background-color: #ffffff;
-
-    text-align: center;
-
-    padding: 40px 20px;
-
-    border-top: 1px solid #e8e5df;
-}
-
-.footer p {
-    color: #777777;
-
-    margin-top: 10px;
-}
-
-.copyright {
-    font-size: 13px;
-
-    margin-top: 25px;
-}
-
-
-/* =========================
-   RESPONSIVE DESIGN
-
-@media (max-width: 900px) {
-
-    .deals-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .navbar {
-        flex-direction: column;
-
-        padding: 20px 0;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    .container {
-        width: 92%;
-    }
-
-    .hero {
-        padding: 65px 0;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .section {
-        padding-top: 50px;
-
-        padding-bottom: 50px;
-    }
-
-    .section-heading h2 {
-        font-size: 28px;
-    }
-
-    .deals-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .deal-card {
-        padding: 25px;
-    }
-
-    .daily-card {
-        padding: 25px;
-    }
-
-    .daily-content h3 {
-        font-size: 23px;
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .order-banner h2 {
-        font-size: 25px;
-    }
-
-}
-/* FEEDBACK FORM */
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-form label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-
-    border: 1px solid #dddddd;
-    border-radius: 6px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-}
-
-form textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-form button {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #593b2c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.fb-form button:hover {
-    background-color: #8b4a35;
-}
-
-/* Footer */
-
-.fb-footer {
-    background-color: #6b3525;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
-
-/* Responsive Design */
-
-@media screen and (max-width: 768px) {
-    .fb-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .fb-header nav a {
-        display: inline-block;
-        margin: 5px;
-    }
-
-    .fb-content {
-        flex-direction: column;
-    }
-
-    .fb-container {
-        margin: 20px auto;
-    }
-}
-
-form button:hover {
-    background-color: #79543c;
-}
-
-/* Footer */
-footer {
-    background-color: #593b2c;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 35px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-    }
-
-    .container {
-        width: 92%;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
-}
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-}
-/* =====================================
-   CAMPUS BITES - PREMIUM DESIGN UPGRADE
-
-/* Smooth transitions */
-
-* {
-    transition: color 0.25s ease,
-                background-color 0.25s ease,
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-}
-
-body {
-    background: #faf8f2;
-    color: #263a2e;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-
-/* NAVIGATION */
-
-.header {
-    background: rgba(255,255,255,0.96);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.04);
-}
-
-.navbar {
-    min-height: 85px;
-}
-
-.logo {
-    font-size: 29px;
-    letter-spacing: -1px;
-}
-
-.nav-links a {
-    position: relative;
-    padding: 10px 0;
-}
-
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #e58b36;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
-}
-
-
-/* HERO */
-
-.hero {
+body:has(.deals-grid) .hero {
     position: relative;
     overflow: hidden;
     background:
         radial-gradient(circle at 85% 20%,
-        rgba(229,139,54,0.23), transparent 30%),
+        rgba(229, 139, 54, 0.23), transparent 30%),
         linear-gradient(130deg, #1c3025, #344d38);
-
+    color: #ffffff;
+    text-align: center;
     padding: 120px 0;
 }
 
-.hero::before {
+body:has(.deals-grid) .hero::before {
     content: "✦";
     position: absolute;
     right: 10%;
     top: 10%;
     font-size: 150px;
-    color: rgba(255,255,255,0.05);
-}
-
-.hero h1 {
-    font-size: clamp(38px, 5vw, 65px);
-    font-weight: 800;
-    letter-spacing: -2px;
+    color: rgba(255, 255, 255, 0.05);
 }
 
 .hero-label {
     display: inline-block;
-    padding: 9px 17px;
-    border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 30px;
+    color: #f2b36f;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+body:has(.deals-grid) .hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+body:has(.deals-grid) .hero h1 span {
+    color: #f2b36f;
 }
 
 .hero-description {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #dddddd;
+    font-size: 17px;
     line-height: 1.9;
 }
 
 .button {
-    border-radius: 30px;
-    padding: 15px 30px;
-    background: #ee9c4b;
+    display: inline-block;
+    background-color: #ee9c4b;
     color: #263a2e;
-    box-shadow: 0 7px 20px rgba(229,139,54,0.2);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 7px 20px rgba(229, 139, 54, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .button:hover {
-    background: #ffc078;
-    box-shadow: 0 10px 25px rgba(229,139,54,0.3);
+    background-color: #ffc078;
+    transform: translateY(-2px);
 }
 
+/* Deals Sections */
 
-/* SECTION HEADINGS */
+.section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: #e58b36;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
 
 .section-heading h2 {
     font-size: 38px;
     letter-spacing: -1px;
     font-weight: 800;
     color: #263a2e;
+    margin-bottom: 12px;
 }
 
 .section-heading p {
+    color: #777777;
     line-height: 1.8;
 }
 
-.section-label {
-    letter-spacing: 3px;
-    font-size: 11px;
-}
-
-
-/* DAILY SPECIAL */
+/* Daily Special */
 
 .daily-card {
     position: relative;
     overflow: hidden;
-    background:
-        linear-gradient(120deg, #ffffff 65%, #fff1df);
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px;
+    background: linear-gradient(120deg, #ffffff 65%, #fff1df);
     border: 1px solid #f0e4d5;
     border-radius: 20px;
-    padding: 45px;
-    box-shadow: 0 12px 35px rgba(38,58,46,0.07);
+    box-shadow: 0 12px 35px rgba(38, 58, 46, 0.07);
 }
 
 .daily-card::after {
@@ -1246,40 +455,57 @@ body {
 .daily-content h3 {
     font-size: 32px;
     color: #263a2e;
+    margin: 15px 0;
 }
 
+.daily-content p {
+    color: #666666;
+}
 
-/* DEAL SECTION */
+.deal-tag {
+    display: inline-block;
+    background-color: #fff0dc;
+    color: #b76b25;
+    border: 1px solid #f5dfc3;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Deal Cards */
 
 .deals-section {
-    background: #f0eee6;
-    position: relative;
+    background-color: #f0eee6;
 }
 
 .deals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
 }
 
-
-/* DEAL CARDS */
-
 .deal-card {
+    position: relative;
+    background-color: #ffffff;
+    padding: 32px;
     border: 1px solid #e9e2d7;
     border-radius: 18px;
-    padding: 32px;
-    background: #ffffff;
-    box-shadow: 0 7px 22px rgba(38,58,46,0.045);
+    box-shadow: 0 7px 22px rgba(38, 58, 46, 0.045);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .deal-card:hover {
-    transform: translateY(-9px);
+    transform: translateY(-7px);
     border-color: #e8ad70;
-    box-shadow: 0 18px 35px rgba(38,58,46,0.11);
+    box-shadow: 0 18px 35px rgba(38, 58, 46, 0.11);
 }
 
 .deal-number {
-    font-size: 48px;
     color: #f2eee5;
+    font-size: 48px;
+    font-weight: bold;
     line-height: 1;
     margin-bottom: 20px;
 }
@@ -1287,44 +513,40 @@ body {
 .deal-card h3 {
     color: #263a2e;
     font-size: 25px;
-    letter-spacing: -0.5px;
+    margin: 15px 0;
 }
 
 .deal-card p {
+    color: #777777;
     line-height: 1.8;
     font-size: 14px;
-}
-
-.deal-tag {
-    background: #fff0dc;
-    color: #b76b25;
-    border: 1px solid #f5dfc3;
-    padding: 7px 13px;
-    font-size: 10px;
+    margin-bottom: 15px;
 }
 
 .deal-items {
-    margin-top: 24px;
+    list-style: none;
+    margin: 20px 0;
 }
 
 .deal-items li {
     padding: 11px 0;
     font-size: 14px;
     border-bottom: 1px dashed #e9e5dc;
+    color: #555555;
 }
 
 .deal-items li::before {
+    content: "✓ ";
     color: #d9893b;
+    font-weight: bold;
 }
 
-
-/* PRICE */
-
 .price {
-    color: #263a2e;
     font-size: 34px;
     font-weight: 800;
+    color: #263a2e;
     letter-spacing: -1px;
+    margin-top: 25px;
 }
 
 .price span {
@@ -1333,29 +555,36 @@ body {
     letter-spacing: 1px;
 }
 
-
-/* ORDER BANNER */
+/* Order Banner */
 
 .order-banner {
     background:
         radial-gradient(circle at 90% 10%,
-        rgba(238,156,75,0.2), transparent 30%),
+        rgba(238, 156, 75, 0.2), transparent 30%),
         #263a2e;
+    color: #ffffff;
+    text-align: center;
     padding: 85px 20px;
 }
 
 .order-banner h2 {
     font-size: 38px;
     letter-spacing: -1px;
+    margin-bottom: 15px;
 }
 
+.order-banner p {
+    color: #dddddd;
+    margin-bottom: 25px;
+}
 
-/* FOOTER */
+/* Deals Footer */
 
 .footer {
-    background: #192a20;
-    border: none;
+    background-color: #192a20;
+    text-align: center;
     padding: 55px 20px;
+    border-top: none;
 }
 
 .footer .logo {
@@ -1364,18 +593,408 @@ body {
 
 .footer p {
     color: #c2c9c1;
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 25px;
 }
 
 
-/* MOBILE */
+/* =====================================================
+   6. ORDER PAGE — order.html
+   ===================================================== */
 
-@media (max-width: 600px) {
+body:has(.contact-section) .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
 
-    .hero {
-        padding: 80px 0;
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    color: #593b2c;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.intro p {
+    color: #555555;
+}
+
+.contact-section {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.contact-info,
+.order-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2,
+.order-form h2 {
+    color: #593b2c;
+    margin-bottom: 15px;
+}
+
+.contact-info h3 {
+    margin-top: 20px;
+    color: #79543c;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Order Form */
+
+.order-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.order-form form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.order-form form input,
+.order-form form select,
+.order-form form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.order-form form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.order-form form button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #593b2c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order-form form button:hover {
+    background-color: #79543c;
+}
+
+
+/* =====================================================
+   7. FEEDBACK PAGE — feedback.html
+   ===================================================== */
+
+.fb-header {
+    background-color: #6b3525;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fb-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.fb-header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fb-header nav a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.fb-header nav a:hover {
+    color: #ffffff;
+    background-color: #8b4a35;
+}
+
+.fb-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.fb-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fb-intro h2 {
+    color: #6b3525;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.fb-intro p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+.fb-content {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+.fb-contact,
+.fb-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 0;
+}
+
+.fb-contact h2,
+.fb-form h2 {
+    color: #6b3525;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.fb-contact p {
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+/* Feedback Form */
+
+.fb-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fb-form form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.fb-form form input,
+.fb-form form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.fb-form form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.fb-form form button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #6b3525;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fb-form form button:hover {
+    background-color: #8b4a35;
+}
+
+.fb-footer {
+    background-color: #6b3525;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+
+/* =====================================================
+   8. FOOTERS — HOME, MENU AND ORDER
+   ===================================================== */
+
+footer:not(.fb-footer):not(.footer) {
+    background-color: #163a2b;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+
+/* =====================================================
+   9. RESPONSIVE DESIGN
+   ===================================================== */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .deals-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .hero h1 {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body:has(.deals-grid) .hero h1 {
+        font-size: 40px;
+    }
+}
+
+
+/* Mobile Devices */
+
+@media (max-width: 768px) {
+
+    /* Home, Menu and Order Headers */
+
+    .home-header h1,
+    .menu-header h1,
+    .order-header h1 {
+        font-size: 28px;
+    }
+
+    .home-header nav,
+    .menu-header nav,
+    .order-header nav {
+        gap: 5px;
+    }
+
+    .home-header nav a,
+    .menu-header nav a,
+    .order-header nav a {
+        padding: 8px 10px;
+    }
+
+    /* Home */
+
+    body:has(.about) .hero {
+        padding: 45px 20px;
+    }
+
+    body:has(.about) .hero h2 {
+        font-size: 25px;
+    }
+
+    .info {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 25px 18px;
+    }
+
+    /* Menu */
+
+    .menu-intro h2 {
+        font-size: 25px;
+    }
+
+    .menu-categories {
+        grid-template-columns: 1fr;
+    }
+
+    /* Order */
+
+    .contact-section {
+        flex-direction: column;
+    }
+
+    body:has(.contact-section) .container {
+        width: 92%;
+    }
+
+    .contact-info,
+    .order-form {
+        width: 100%;
+    }
+
+    /* Feedback */
+
+    .fb-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .fb-header nav {
+        justify-content: center;
+    }
+
+    .fb-content {
+        flex-direction: column;
+    }
+
+    .fb-container {
+        margin: 20px auto;
+    }
+
+    /* Deals */
+
+    .section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    body:has(.deals-grid) .hero {
+        padding: 80px 20px;
+    }
+
+    body:has(.deals-grid) .hero h1 {
+        font-size: 32px;
         letter-spacing: -1px;
     }
 
@@ -1394,10 +1013,6 @@ body {
         max-width: 75%;
     }
 
-    .section-heading h2 {
-        font-size: 30px;
-    }
-
     .deal-card {
         padding: 28px;
     }
@@ -1405,5 +1020,97 @@ body {
     .order-banner h2 {
         font-size: 28px;
     }
+}
 
+
+/* Small Mobile Devices */
+
+@media (max-width: 480px) {
+
+    /* Home */
+
+    .home-header,
+    .menu-header,
+    .order-header {
+        padding: 22px 12px;
+    }
+
+    body:has(.about) .hero p {
+        font-size: 15px;
+    }
+
+    body:has(.about) main,
+    body:has(.menu-intro) main {
+        padding: 0 14px;
+    }
+
+    /* Menu */
+
+    .menu-intro {
+        padding: 25px 18px;
+    }
+
+    .menu-category {
+        padding: 20px 16px;
+    }
+
+    .menu-cta {
+        padding: 30px 18px;
+    }
+
+    .menu-list li {
+        font-size: 14px;
+    }
+
+    /* Order */
+
+    body:has(.contact-section) .container {
+        width: 94%;
+    }
+
+    .contact-info,
+    .order-form {
+        padding: 20px;
+    }
+
+    /* Feedback */
+
+    .fb-container {
+        padding: 14px;
+    }
+
+    .fb-contact,
+    .fb-form {
+        padding: 20px;
+    }
+
+    .fb-intro h2 {
+        font-size: 25px;
+    }
+
+    /* Deals */
+
+    body:has(.deals-grid) .container {
+        width: 92%;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .daily-card {
+        padding: 22px;
+    }
+
+    .daily-content h3 {
+        font-size: 22px;
+    }
+
+    .deal-card {
+        padding: 23px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
 }
