@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Campus Bites</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Bites</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="deals.html">Deals</a>
+            <a href="order.html">Order Online</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Order Your Favourite Food</h2>
+            <p>Enjoy your favourite meals from Campus Bites.
+               Fill out the form below to place your order.</p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-info">
+                <h2>How to Order</h2>
+                <p>Choose your favourite food, enter your details
+                   and submit your order.</p>
+
+                <h3>Available Items</h3>
+                <p>Fresh snacks, burgers, sandwiches and drinks.</p>
+
+                <h3>Order Timings</h3>
+                <p>Available during cafeteria opening hours.</p>
+            </div>
+
+            <div class="feedback-form">
+                <h2>Place Your Order</h2>
+
+                <form action="#" method="post">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your name" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email" required>
+
+                    <label for="food">Select Food Item</label>
+                    <select id="food" name="food" required>
+                        <option value="">Choose an item</option>
+                        <option value="burger">Burger</option>
+                        <option value="sandwich">Sandwich</option>
+                        <option value="fries">French Fries</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="drink">Cold Drink</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity"
+                           min="1" value="1" required>
+
+                    <label for="instructions">Special Instructions</label>
+                    <textarea id="instructions" name="instructions"
+                              placeholder="Any special request?"></textarea>
+
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Bites. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
