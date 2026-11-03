@@ -1,0 +1,872 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f8f7f3;
+
+    color: #242424;
+
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.header {
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e8e5df;
+}
+
+.navbar {
+    min-height: 80px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.logo {
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #26352b;
+}
+
+.logo span {
+    color: #e58b36;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #555555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e58b36;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    padding: 100px 0;
+
+    background-color: #26352b;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.hero-label {
+    color: #f2b36f;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f2b36f;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #dddddd;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    background-color: #e58b36;
+
+    color: #ffffff;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #c97424;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding-top: 75px;
+
+    padding-bottom: 75px;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-label {
+    color: #e58b36;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #777777;
+}
+
+
+/* =========================
+   DAILY SPECIAL
+========================= */
+
+.daily-card {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e8e5df;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.daily-content h3 {
+    font-size: 28px;
+
+    margin: 15px 0;
+}
+
+.daily-content p {
+    color: #666666;
+}
+
+
+/* =========================
+   DEAL TAG
+========================= */
+
+.deal-tag {
+    display: inline-block;
+
+    background-color: #fff2df;
+
+    color: #bd7025;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   DEAL CARDS
+========================= */
+
+.deals-section {
+    background-color: #f0eee8;
+}
+
+.deals-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.deal-card {
+    position: relative;
+
+    background-color: #ffffff;
+
+    padding: 30px;
+
+    border: 1px solid #e6e2da;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.deal-number {
+    color: #e9e5dc;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.deal-card h3 {
+    font-size: 24px;
+
+    margin: 15px 0;
+}
+
+.deal-card p {
+    color: #777777;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FOOD ITEMS
+========================= */
+
+.deal-items {
+    list-style: none;
+
+    margin: 20px 0;
+}
+
+.deal-items li {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #555555;
+}
+
+.deal-items li::before {
+    content: "✓ ";
+
+    color: #e58b36;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #26352b;
+
+    margin-top: 25px;
+}
+
+.price span {
+    font-size: 14px;
+
+    color: #e58b36;
+}
+
+
+/* =========================
+   ORDER BANNER
+========================= */
+
+.order-banner {
+    background-color: #26352b;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 65px 20px;
+}
+
+.order-banner h2 {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.order-banner p {
+    color: #dddddd;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #ffffff;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid #e8e5df;
+}
+
+.footer p {
+    color: #777777;
+
+    margin-top: 10px;
+}
+
+.copyright {
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .deals-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 20px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .section {
+        padding-top: 50px;
+
+        padding-bottom: 50px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .deal-card {
+        padding: 25px;
+    }
+
+    .daily-card {
+        padding: 25px;
+    }
+
+    .daily-content h3 {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .order-banner h2 {
+        font-size: 25px;
+    }
+
+}
+/* FEEDBACK FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+/* =====================================
+   CAMPUS BITES - PREMIUM DESIGN UPGRADE
+===================================== */
+
+/* Smooth transitions */
+
+* {
+    transition: color 0.25s ease,
+                background-color 0.25s ease,
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+body {
+    background: #faf8f2;
+    color: #263a2e;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+/* NAVIGATION */
+
+.header {
+    background: rgba(255,255,255,0.96);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.04);
+}
+
+.navbar {
+    min-height: 85px;
+}
+
+.logo {
+    font-size: 29px;
+    letter-spacing: -1px;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e58b36;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 85% 20%,
+        rgba(229,139,54,0.23), transparent 30%),
+        linear-gradient(130deg, #1c3025, #344d38);
+
+    padding: 120px 0;
+}
+
+.hero::before {
+    content: "✦";
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    font-size: 150px;
+    color: rgba(255,255,255,0.05);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 9px 17px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+}
+
+.hero-description {
+    line-height: 1.9;
+}
+
+.button {
+    border-radius: 30px;
+    padding: 15px 30px;
+    background: #ee9c4b;
+    color: #263a2e;
+    box-shadow: 0 7px 20px rgba(229,139,54,0.2);
+}
+
+.button:hover {
+    background: #ffc078;
+    box-shadow: 0 10px 25px rgba(229,139,54,0.3);
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+    font-weight: 800;
+    color: #263a2e;
+}
+
+.section-heading p {
+    line-height: 1.8;
+}
+
+.section-label {
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+
+
+/* DAILY SPECIAL */
+
+.daily-card {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(120deg, #ffffff 65%, #fff1df);
+    border: 1px solid #f0e4d5;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 12px 35px rgba(38,58,46,0.07);
+}
+
+.daily-card::after {
+    content: "🍔";
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    font-size: 85px;
+    opacity: 0.13;
+}
+
+.daily-content h3 {
+    font-size: 32px;
+    color: #263a2e;
+}
+
+
+/* DEAL SECTION */
+
+.deals-section {
+    background: #f0eee6;
+    position: relative;
+}
+
+.deals-grid {
+    gap: 28px;
+}
+
+
+/* DEAL CARDS */
+
+.deal-card {
+    border: 1px solid #e9e2d7;
+    border-radius: 18px;
+    padding: 32px;
+    background: #ffffff;
+    box-shadow: 0 7px 22px rgba(38,58,46,0.045);
+}
+
+.deal-card:hover {
+    transform: translateY(-9px);
+    border-color: #e8ad70;
+    box-shadow: 0 18px 35px rgba(38,58,46,0.11);
+}
+
+.deal-number {
+    font-size: 48px;
+    color: #f2eee5;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.deal-card h3 {
+    color: #263a2e;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+}
+
+.deal-card p {
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.deal-tag {
+    background: #fff0dc;
+    color: #b76b25;
+    border: 1px solid #f5dfc3;
+    padding: 7px 13px;
+    font-size: 10px;
+}
+
+.deal-items {
+    margin-top: 24px;
+}
+
+.deal-items li {
+    padding: 11px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed #e9e5dc;
+}
+
+.deal-items li::before {
+    color: #d9893b;
+}
+
+
+/* PRICE */
+
+.price {
+    color: #263a2e;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.price span {
+    color: #d9873b;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* ORDER BANNER */
+
+.order-banner {
+    background:
+        radial-gradient(circle at 90% 10%,
+        rgba(238,156,75,0.2), transparent 30%),
+        #263a2e;
+    padding: 85px 20px;
+}
+
+.order-banner h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: #192a20;
+    border: none;
+    padding: 55px 20px;
+}
+
+.footer .logo {
+    color: #ffffff;
+}
+
+.footer p {
+    color: #c2c9c1;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .daily-card {
+        padding: 28px;
+    }
+
+    .daily-card::after {
+        font-size: 55px;
+        right: 15px;
+        top: 20px;
+    }
+
+    .daily-content h3 {
+        font-size: 24px;
+        max-width: 75%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .deal-card {
+        padding: 28px;
+    }
+
+    .order-banner h2 {
+        font-size: 28px;
+    }
+
+}
